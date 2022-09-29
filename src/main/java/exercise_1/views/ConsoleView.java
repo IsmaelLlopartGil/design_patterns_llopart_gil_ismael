@@ -1,5 +1,4 @@
 package exercise_1.views;
-
 import exercise_1.controllers.ManagementController;
 import exercise_1.controllers.StoreController;
 

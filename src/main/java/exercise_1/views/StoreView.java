@@ -9,7 +9,7 @@ public class StoreView {
 	public void interact(StoreController storeController) {
 		
         do {
-        	System.out.println(Message.MANAGEMENT_MENU_TITLE);
+        	System.out.println( "\n" + Message.STORE_MENU_TITLE + " " + storeController.getFlowerShopName().toUpperCase());
         	System.out.println(Message.HORIZONTAL_LINE);
             new StoreMenu(storeController).run();
             

@@ -1,21 +1,21 @@
 package exercise_1.controllers;
 
-import exercise_1.models.State;
+import exercise_1.models.Session;
 import exercise_1.types.StateValue;
 
 public abstract class Controller {
 
-	protected State state;
+	protected Session session;
 
-	public Controller(State state) {
-		this.state = state;
+	public Controller(Session session) {
+		this.session = session;
 	}
 	
 	public void setState(StateValue stateValue) {
-		this.state.setState(stateValue);
+		this.session.setValueState(stateValue);
 	}
 	
 	public StateValue getStateValue () {
-		return state.getValueState();
+		return session.getValueState();
 	}
 }

@@ -9,9 +9,8 @@ public class ManagementView {
 	public void interact(ManagementController managementController) {
 		
         do {
-        	System.out.println(Message.MANAGEMENT_MENU_TITLE);
+        	System.out.println( "\n" + Message.MANAGEMENT_MENU_TITLE);
         	System.out.println(Message.HORIZONTAL_LINE);
-  
             new ManagementMenu(managementController).run();
         } while (managementController.getStateValue() == StateValue.STORE_SELECTOR);
 		

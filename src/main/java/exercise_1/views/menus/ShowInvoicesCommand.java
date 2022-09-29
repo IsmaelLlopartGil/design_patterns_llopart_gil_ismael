@@ -1,6 +1,7 @@
 package exercise_1.views.menus;
 
 import com.liche.utils.console.command_menu.Command;
+import com.liche.utils.io.Input;
 
 import exercise_1.controllers.StoreController;
 import exercise_1.views.Message;
@@ -16,7 +17,8 @@ public class ShowInvoicesCommand extends Command {
 
 	@Override
 	public void execute() {
-		
+		System.out.println(storeController.getInvoiceList());
+		Input.readString("Prem intro");
 
 	}
 
