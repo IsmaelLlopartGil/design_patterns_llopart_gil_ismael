@@ -6,10 +6,19 @@ public class Session {
 
 	private State state;
 	private FlowerShop flowerShop;
+	private String name;
 
 	public Session() {
-		this.state = new State();
-		this.flowerShop = new FlowerShop();
+		state = new State();
+		flowerShop = new FlowerShop();
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
 	}
 
 	public StateValue getValueState() {
@@ -35,5 +44,5 @@ public class Session {
 
 	public void removeItem(Item item) {
 		flowerShop.removeItem(item);
-	}
+	}	
 }

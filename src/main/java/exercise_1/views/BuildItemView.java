@@ -14,7 +14,6 @@ public class BuildItemView {
 
 	public void build() {
 		item.setDescripcion(Input.readString("Introdueix la descripció: "));
-		item.setPurchasePrice(Input.readFloat("Introdueix el preu de compra: "));
 		item.setSalePrice(Input.readFloat("Introdueix el preu de venda: "));		
 	}
 }

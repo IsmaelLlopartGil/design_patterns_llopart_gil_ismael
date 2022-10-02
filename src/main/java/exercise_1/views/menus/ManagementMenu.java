@@ -11,7 +11,7 @@ public class ManagementMenu extends CommandConsoleMenu {
 		String[] gamesNames = managementController.getShopNames();
 		
 		for (String title : gamesNames) {
-			this.addCommand(new GameSelectCommand(title, managementController));
+			this.addOption(new SelectedShopCommand(managementController, title));
 		}
 	}
 }

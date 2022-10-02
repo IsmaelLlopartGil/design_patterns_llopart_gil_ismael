@@ -2,11 +2,12 @@ package exercise_1.controllers;
 
 import exercise_1.models.FlowerShop;
 import exercise_1.models.Session;
+import exercise_1.models.DAO.SessionDAO;
 
 public class ManagementController extends Controller implements AceptorController {
 
-	public ManagementController(Session session) {
-		super(session);
+	public ManagementController(Session session, SessionDAO sessionDAO) {
+		super(session, sessionDAO);
 	}
 
 	@Override
@@ -18,7 +19,17 @@ public class ManagementController extends Controller implements AceptorControlle
 		session.setFlowerShop(flowerShop);
 	}
 
-	public void saveFlowerShop() {
+	public String[] getShopNames() {
+		return sessionDAO.getShopNames();
+	}
+	
+	public void load (String name) {
+		sessionDAO.load(name);
+	}
+	
+	public void associate() {
+		this.sessionDAO.associate(session);
 		
 	}
 }
+

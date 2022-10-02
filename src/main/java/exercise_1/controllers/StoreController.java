@@ -1,11 +1,12 @@
 package exercise_1.controllers;
 
 import exercise_1.models.*;
+import exercise_1.models.DAO.SessionDAO;
 
 public class StoreController extends Controller implements AceptorController {
 
-	public StoreController(Session session) {
-		super(session);
+	public StoreController(Session session, SessionDAO sessionDAO) {
+		super(session, sessionDAO);
 	}
 
 	@Override
@@ -80,7 +81,7 @@ public class StoreController extends Controller implements AceptorController {
 	}
 
 	public String getInvoiceList() {
-		return session.getFlowerShop().getInvoiceList();
+		return session.getFlowerShop().getInvoiceList().toString();
 		
 	}
 
@@ -90,5 +91,14 @@ public class StoreController extends Controller implements AceptorController {
 
 	public String getEarnings() {
 		return session.getFlowerShop().getEarnings();
+	}
+
+	public void save() {
+		sessionDAO.save(getFlowerShopName());	
+	}
+
+	public void associate() {
+		this.sessionDAO.associate(session);
+		
 	}
 }

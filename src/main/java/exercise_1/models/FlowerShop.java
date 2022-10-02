@@ -195,8 +195,8 @@ public class FlowerShop {
 		return tree;
 	}
 
-	public String getInvoiceList() {
-		return invoiceList.toString();
+	public List<Invoice> getInvoiceList() {
+		return invoiceList;
 	}
 
 	public String getTotalValue() {
@@ -225,4 +225,41 @@ public class FlowerShop {
 		}
 		return String.valueOf(totalEarnings);
 	}
+
+	public int getInvoiceNumber() {
+		return invoiceNumber;
+	}
+	
+	public Map<Decor, Integer> getDecorMap () {
+		return decorMap;
+	}
+	
+	public Map<Flower, Integer> getFlowerMap () {
+		return flowerMap;
+	}
+	
+	public Map<Tree, Integer> getTreeMap () {
+		return treeMap;
+	}
+
+	public void setFlowerMap(Map<Flower, Integer> flowerMap) {
+		this.flowerMap = flowerMap;
+	}
+
+	public void setTreeMap(Map<Tree, Integer> treeMap) {
+		this.treeMap = treeMap;
+	}
+
+	public void setDecorMap(Map<Decor, Integer> decorMap) {
+		this.decorMap = decorMap;
+	}
+
+	public void setInvoiceList(ArrayList<Invoice> invoiceList) {
+		this.invoiceList = invoiceList;
+	}
+
+	public void setInvoiceNumber(int invoiceNumber) {
+		this.invoiceNumber = invoiceNumber;
+	}
+
 }

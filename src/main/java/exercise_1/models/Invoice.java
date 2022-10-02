@@ -14,6 +14,26 @@ public class Invoice {
 		itemMap = new HashMap<>();
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Map<Item, Integer> getItemMap() {
+		return itemMap;
+	}
+
+	public void setItemMap(Map<Item, Integer> itemMap) {
+		this.itemMap = itemMap;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
 	private void calculateAmount() {
 		amount = 0;
 
@@ -33,7 +53,7 @@ public class Invoice {
 
 	@Override
 	public String toString() {
-		return "Número de factura: " + name + ", Import total: " + amount + ", Producte/Quantitat: " + itemMap;
+		return "Número de factura: " + name + ", Import total: " + amount + ", Producte/Quantitat: " + itemMap + "\n";
 	}
 
 	public Double getAmount() {

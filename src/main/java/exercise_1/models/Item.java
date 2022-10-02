@@ -4,21 +4,16 @@ import java.util.Objects;
 
 public abstract class Item {
 
-	private float purchasePrice;
-	private float salePrice;
 	private String name;
 	private String descripcion;
-	
+	private float salePrice;
+
 	public Item(String name) {
-		this.name=name;
-	}
-	
-	public Item() {
-		this.name=null;
+		this.name = name;
 	}
 
-	public float getPurchasePrice() {
-		return purchasePrice;
+	public Item() {
+		this.name = null;
 	}
 
 	public float getSalePrice() {
@@ -40,16 +35,12 @@ public abstract class Item {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
-	public void setPurchasePrice(float purchasePrice) {
-		this.purchasePrice = purchasePrice;
-	}
 
 	public void setSalePrice(float salePrice) {
 		this.salePrice = salePrice;
 	}
 
-	public abstract void acceptAdd (FlowerShop flowerShop);
+	public abstract void acceptAdd(FlowerShop flowerShop);
 
 	protected abstract void acceptRemove(FlowerShop flowerShop);
 

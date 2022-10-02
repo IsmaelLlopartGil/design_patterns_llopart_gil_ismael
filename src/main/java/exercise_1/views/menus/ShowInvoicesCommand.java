@@ -17,7 +17,7 @@ public class ShowInvoicesCommand extends Command {
 
 	@Override
 	public void execute() {
-		System.out.println(storeController.getInvoiceList());
+		System.out.println(storeController.getInvoiceList().toString());
 		Input.readString("Prem intro");
 
 	}
