@@ -49,13 +49,7 @@
 			<version>3.23.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>
-				cat.edu.barcelona_activa.it_academy.curs_java.Sprint3
-			</groupId>
-			<artifactId>liche_utils</artifactId>
-			<version>1</version>
-		</dependency>
+
 	</dependencies>
 
 	<build>
